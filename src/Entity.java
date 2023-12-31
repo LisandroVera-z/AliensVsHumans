@@ -21,6 +21,13 @@ public class Entity {
         return health;
     }
 
+    public void useAttackOn(String attack, Entity name) {
+        int enemyHealth = name.getHealth();
+        System.out.println(attack + " attack hit " + name);
+        enemyHealth = enemyHealth - 10;
+        System.out.println(name + " took " + 10 + " damage.");
+    }
+
     public void useWeaponOn(String weapon, int weaponDMG, Entity name) {
         int enemyHealth = name.getHealth();
         System.out.println(weapon + " fired at " + name);
