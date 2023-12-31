@@ -21,24 +21,21 @@ public class Entity {
         return health;
     }
 
-    public void useAttackOn(String attack, Entity name) {
-        int enemyHealth = name.getHealth();
-        System.out.println(attack + " attack hit " + name);
-        enemyHealth = enemyHealth - 10;
-        System.out.println(name + " took " + 10 + " damage.");
+    public void useAttackOn(int attack, Entity name) {
+        System.out.println("Attack hit " + name);
+        name.health -= attack;
+        System.out.println(name + " took " + attack + " damage.");
     }
 
     public void useWeaponOn(String weapon, int weaponDMG, Entity name) {
-        int enemyHealth = name.getHealth();
         System.out.println(weapon + " fired at " + name);
-        enemyHealth = enemyHealth - weaponDMG;
+        name.health -= weaponDMG;
         System.out.println(name + " took " + weaponDMG + " damage.");
     }
 
     public void useAbilityOn(String ability, int abilityDMG, Entity name) {
-        int enemyHealth = name.getHealth();
         System.out.println(ability + " used on " + name);
-        enemyHealth = enemyHealth - abilityDMG;
+        name.health -= abilityDMG;
         System.out.println(name + " took " + abilityDMG + " damage.");
     }
 

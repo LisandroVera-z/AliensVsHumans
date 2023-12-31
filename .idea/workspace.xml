@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ef16bdf9-0a41-4045-b2a7-c4a0b7b3557c" name="Changes" comment="AliensVsHumans">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Alien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Alien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HumanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HumanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Environment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnvironmentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +30,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+    <option name="showPreview" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -35,7 +46,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.EntityTest.executor": "Run",
+    "JUnit.EntityTest.executor": "Debug",
+    "JUnit.EntityTest.testEntityConstructor.executor": "Coverage",
+    "JUnit.EntityTest.testGetHealth.executor": "Coverage",
+    "JUnit.EntityTest.testUseAbilityOn.executor": "Coverage",
+    "JUnit.EntityTest.testUseAttackOn.executor": "Run",
+    "JUnit.EntityTest.testUseWeaponOn.executor": "Coverage",
+    "JUnit.HumanTest.executor": "Coverage",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -62,7 +79,16 @@
       <command value="EntityTest.java" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AlienTest">
+    <configuration name="AlienTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AliensVsHumans" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AlienTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EntityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AliensVsHumans" />
       <option name="PACKAGE_NAME" value="" />
@@ -72,9 +98,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EntityTest.testEntityConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AliensVsHumans" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EntityTest" />
+      <option name="METHOD_NAME" value="testEntityConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntityTest.testUseAttackOn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AliensVsHumans" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EntityTest" />
+      <option name="METHOD_NAME" value="testUseAttackOn" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HumanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AliensVsHumans" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HumanTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AlienTest" />
+        <item itemvalue="JUnit.HumanTest" />
         <item itemvalue="JUnit.EntityTest" />
+        <item itemvalue="JUnit.EntityTest.testUseAttackOn" />
+        <item itemvalue="JUnit.EntityTest.testEntityConstructor" />
       </list>
     </recent_temporary>
   </component>
@@ -110,11 +169,27 @@
       <option name="project" value="LOCAL" />
       <updated>1704059870909</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="AliensVsHumans">
+      <option name="closed" value="true" />
+      <created>1704060304108</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704060304108</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AliensVsHumans" />
     <option name="LAST_COMMIT_MESSAGE" value="AliensVsHumans" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AliensVsHumans$EntityTest_testUseWeaponOn.ic" NAME="EntityTest.testUseWeaponOn Coverage Results" MODIFIED="1704062068748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AliensVsHumans$EntityTest_testGetHealth.ic" NAME="EntityTest.testGetHealth Coverage Results" MODIFIED="1704062034731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AliensVsHumans$EntityTest_testUseAttackOn.ic" NAME="EntityTest.testUseAttackOn Coverage Results" MODIFIED="1704062055953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AliensVsHumans$EntityTest.ic" NAME="EntityTest Coverage Results" MODIFIED="1704063401498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AliensVsHumans$EntityTest_testUseAbilityOn.ic" NAME="EntityTest.testUseAbilityOn Coverage Results" MODIFIED="1704062074702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AliensVsHumans$EntityTest_testEntityConstructor.ic" NAME="EntityTest.testEntityConstructor Coverage Results" MODIFIED="1704062134772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
