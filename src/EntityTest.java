@@ -4,57 +4,47 @@ import static org.junit.Assert.*;
 public class EntityTest {
 
     @Test
-    public void testEntityConstructor() {
-        String testName = "TestEntity";
-        int testHealth = 100;
-        int testAttack = 10;
-        String testWeapon = "Sword";
-        int testWeaponDMG = 15;
-        String testAbility = "Fireball";
-        int testAbilityDMG = 30;
+    public void testConstructor() {
+        Entity entity = new Entity(100, 20, "Sword", 10, "Fireball", 15);
 
-        Entity entity = new Entity(testName, testHealth, testAttack, testWeapon, testWeaponDMG, testAbility, testAbilityDMG);
-
-        // Test that the fields are set correctly
-        assertEquals(testName, entity.name);
-        assertEquals(testHealth, entity.health);
-        assertEquals(testAttack, entity.attack);
-        assertEquals(testWeapon, entity.weapon);
-        assertEquals(testWeaponDMG, entity.weaponDMG);
-        assertEquals(testAbility, entity.ability);
-        assertEquals(testAbilityDMG, entity.abilityDMG);
-    }
-
-    @Test
-    public void testGetHealth() {
-        Entity entity = new Entity("TestEntity", 100, 20, "Sword", 15, "Fireball", 30);
         assertEquals(100, entity.getHealth());
+        assertEquals(20, entity.attack);
+        assertEquals("Sword", entity.weapon);
+        assertEquals(10, entity.weaponDMG);
+        assertEquals("Fireball", entity.ability);
+        assertEquals(15, entity.abilityDMG);
     }
 
     @Test
     public void testUseAttackOn() {
-        Entity attacker = new Entity("Attacker", 100, 20, "Sword", 15, "Fireball", 30);
-        Entity target = new Entity("Target", 100, 20, "Axe", 10, "Shield", 0);
+        Entity attacker = new Entity(100, 20, "Sword", 10, "Fireball", 15);
+        Entity target = new Entity(100, 15, "Axe", 12, "Ice Shard", 20);
 
-        attacker.useAttackOn(10, target);
+        attacker.useAttackOn(attacker, 10, target);
+
         assertEquals(90, target.getHealth());
     }
 
     @Test
     public void testUseWeaponOn() {
-        Entity attacker = new Entity("Attacker", 100, 20, "Sword", 15, "Fireball", 30);
-        Entity target = new Entity("Target", 100, 20, "Axe", 10, "Shield", 0);
+        Entity attacker = new Entity(100, 20, "Sword", 10, "Fireball", 15);
+        Entity target = new Entity(100, 15, "Axe", 12, "Ice Shard", 20);
 
-        attacker.useWeaponOn("Sword", 15, target);
-        assertEquals(85, target.getHealth());
+        attacker.useWeaponOn(attacker, "Sword", 10, target);
+
+        assertEquals(90, target.getHealth());
     }
 
     @Test
     public void testUseAbilityOn() {
-        Entity attacker = new Entity("Attacker", 100, 20, "Sword", 15, "Fireball", 30);
-        Entity target = new Entity("Target", 100, 20, "Axe", 10, "Shield", 0);
+        Entity attacker = new Entity(100, 20, "Sword", 10, "Fireball", 15);
+        Entity target = new Entity(100, 15, "Axe", 12, "Ice Shard", 20);
 
-        attacker.useAbilityOn("Fireball", 30, target);
-        assertEquals(70, target.getHealth());
+        attacker.useAbilityOn(attacker, "Fireball", 15, target);
+
+        assertEquals(85, target.getHealth());
     }
 }
+
+
+

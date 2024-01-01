@@ -2,8 +2,8 @@ public class Human extends Entity{
     public int armor;
     public int medicine;
 
-    public Human(String name, int health, int attack, String weapon, int weaponDMG, String ability, int abilityDMG, int armor, int medicine) {
-        super(name, health, attack, weapon, weaponDMG, ability, abilityDMG);
+    public Human(int health, int attack, String weapon, int weaponDMG, String ability, int abilityDMG, int armor, int medicine) {
+        super(health, attack, weapon, weaponDMG, ability, abilityDMG);
         this.armor = armor;
         this.medicine = medicine;
     }

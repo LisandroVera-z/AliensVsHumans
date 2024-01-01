@@ -5,36 +5,26 @@ public class AlienTest {
 
     @Test
     public void testAlienConstructor() {
-        String testName = "TestAlien";
-        int testHealth = 120;
-        int testAttack = 25;
-        String testWeapon = "Ray Gun";
-        int testWeaponDMG = 20;
-        String testAbility = "Teleport";
-        int testAbilityDMG = 35;
-        String testSpecies = "Martian";
-        int testHeal = 15;
+        Alien alien = new Alien(120, 25, "Ray Gun", 15, "Healing Wave", 10, "Xenon", 30);
 
-        Alien alien = new Alien(testName, testHealth, testAttack, testWeapon, testWeaponDMG, testAbility, testAbilityDMG, testSpecies, testHeal);
-
-        // Test that the fields are set correctly
-        assertEquals(testName, alien.name);
-        assertEquals(testHealth, alien.health);
-        assertEquals(testAttack, alien.attack);
-        assertEquals(testWeapon, alien.weapon);
-        assertEquals(testWeaponDMG, alien.weaponDMG);
-        assertEquals(testAbility, alien.ability);
-        assertEquals(testAbilityDMG, alien.abilityDMG);
-        assertEquals(testSpecies, alien.species);
-        assertEquals(testHeal, alien.heal);
+        assertEquals(120, alien.getHealth());
+        assertEquals(25, alien.attack);
+        assertEquals("Ray Gun", alien.weapon);
+        assertEquals(15, alien.weaponDMG);
+        assertEquals("Healing Wave", alien.ability);
+        assertEquals(10, alien.abilityDMG);
+        assertEquals("Xenon", alien.species);
+        assertEquals(30, alien.heal);
     }
 
     @Test
     public void testUseHealOn() {
-        Alien alien = new Alien("TestAlien", 120, 25, "Ray Gun", 20, "Teleport", 35, "Martian", 15);
-        Entity target = new Entity("Target", 80, 20, "Axe", 10, "Shield", 0);
+        Alien alien = new Alien(120, 25, "Ray Gun", 15, "Healing Wave", 10, "Xenon", 30);
+        Entity target = new Entity(80, 18, "Sword", 12, "Fireball", 20);
 
-        alien.useHealOn(10, target);
-        assertEquals(90, target.getHealth());
+        alien.useHealOn(30, target);
+
+        assertEquals(110, target.getHealth());
     }
 }
+
