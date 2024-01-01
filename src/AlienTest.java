@@ -4,27 +4,37 @@ import static org.junit.Assert.*;
 public class AlienTest {
 
     @Test
-    public void testAlienConstructor() {
-        Alien alien = new Alien(120, 25, "Ray Gun", 15, "Healing Wave", 10, "Xenon", 30);
+    public void testConstructor() {
+        // Test constructor with valid parameters
+        Alien alien = new Alien(100, 20, "Ray Gun", 15, "Healing Ray", 25, "Martian", 10);
 
-        assertEquals(120, alien.getHealth());
-        assertEquals(25, alien.attack);
+        assertEquals(100, alien.getHealth());
+        assertEquals(20, alien.attack);
         assertEquals("Ray Gun", alien.weapon);
         assertEquals(15, alien.weaponDMG);
-        assertEquals("Healing Wave", alien.ability);
-        assertEquals(10, alien.abilityDMG);
-        assertEquals("Xenon", alien.species);
-        assertEquals(30, alien.heal);
+        assertEquals("Healing Ray", alien.ability);
+        assertEquals(25, alien.abilityDMG);
+        assertEquals("Martian", alien.species);
+        assertEquals(10, alien.heal);
     }
 
     @Test
     public void testUseHealOn() {
-        Alien alien = new Alien(120, 25, "Ray Gun", 15, "Healing Wave", 10, "Xenon", 30);
-        Entity target = new Entity(80, 18, "Sword", 12, "Fireball", 20);
+        Alien alien = new Alien(100, 20, "Ray Gun", 15, "Healing Ray", 25, "Martian", 10);
+        Human human = new Human(80, 25, "Blaster", 20, "MedKit", 30, 15, 5);
 
-        alien.useHealOn(30, target);
+        // Initial health of the human
+        int initialHumanHealth = human.getHealth();
 
-        assertEquals(110, target.getHealth());
+        // Alien uses heal on the human
+        alien.useHealOn(alien, alien.heal, human);
+
+        // Expected health after healing
+        int expectedHumanHealth = initialHumanHealth + alien.heal;
+
+        // Verify if the human's health is as expected after healing
+        assertEquals(expectedHumanHealth, human.getHealth());
     }
 }
+
 

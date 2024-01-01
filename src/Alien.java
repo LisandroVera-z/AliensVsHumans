@@ -9,8 +9,8 @@ public class Alien extends Entity{
 
     }
 
-    public void useHealOn(int heal, Entity name) {
+    public void useHealOn(Entity healer, int heal, Entity name) {
         name.health += heal;
-        System.out.println(name + " healed " + heal + " health.");
+        System.out.println(healer + " healed " + name + ": +" + heal + " health.");
     }
 }

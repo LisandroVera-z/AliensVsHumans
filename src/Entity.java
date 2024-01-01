@@ -5,6 +5,8 @@ public class Entity {
     public int weaponDMG;
     public String ability;
     public int abilityDMG;
+    protected int row;
+    protected int col;
 
     public Entity(int health, int attack, String weapon, int weaponDMG, String ability, int abilityDMG) {
         this.health = health;
@@ -15,6 +17,18 @@ public class Entity {
         this.abilityDMG = abilityDMG;
     }
 
+    public void setRow(int row) {
+        this.row = row;
+    }
+    public void setCol(int col) {
+        this.col = col;
+    }
+    public int getRow(){
+        return row;
+    }
+    public int getCol(){
+        return col;
+    }
     public int getHealth() {
         return health;
     }
